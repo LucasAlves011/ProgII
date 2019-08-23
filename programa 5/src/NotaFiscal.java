@@ -5,7 +5,7 @@ import java.util.Random;
 public class NotaFiscal {
 	
 	Random gerador = new Random();
-	DateTimeFormatter forma = DateTimeFormatter.ofPattern("dd/MM/yyyy - hh:mm:ss");
+	DateTimeFormatter forma = DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm:ss");
 
 	private Produto[] produtos = new Produto[20];
 	private double desconto;
@@ -36,7 +36,7 @@ public class NotaFiscal {
 			produtos[indexer()] = x;
 		}
 		else
-			System.out.println("Lista cheia,produto n„o adicionado");
+			System.out.println("Lista cheia,produto n√£o adicionado");
 	}
 	
 	//temporario
@@ -50,7 +50,7 @@ public class NotaFiscal {
 		
 		return "---------- Nota Fiscal ----------\n    " + dataHora.format(forma) + "\n\n"
 				+ x + "----------------------------------\n" + "Total: R$ " + totalIdentado+
-				"\nUm desconto de " + descontoIdentado + "% j· foi aplicado";
+				"\nUm desconto de " + descontoIdentado + "% j√° foi aplicado";
 	}
 	
 	private int indexer(){
